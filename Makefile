@@ -1,4 +1,6 @@
 all: headers.pdf methods.pdf status-codes.pdf
+
+clean:
 	rm -r *.aux
 	rm -r *.log
 	rm -r *.nav
@@ -11,7 +13,7 @@ headers.pdf:
 	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error headers.tex
 
 methods.pdf:
-	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error headers.tex
+	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error methods.tex
 
 status-codes.pdf:
-	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error headers.tex
+	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error status-codes.tex
