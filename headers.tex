@@ -4,12 +4,14 @@
 
 \usepackage[orientation=landscape, size=a0]{beamerposter}
 \usepackage{listings}
+\usepackage{xcolor}
 \usepackage{graphicx}
 
 \setlength{\tabcolsep}{18pt}
 \renewcommand{\arraystretch}{1.7}
 
 \newcommand{\header}[1]{\texttt{\lstinline!#1!}}
+\definecolor{BigBlue}{HTML}{347ABE}
 
 \input{./footer.tex}
 
@@ -52,18 +54,18 @@
           \footnotesize
           \begin{tabular}{r p{0.45\textwidth} p{0.35\textwidth}}
             Field & Description & Example \\ \hline
-            Accept & Acceptable Content-Types for the response & \header{Accept: text/html } \\
+            \color{BigBlue}{Accept} & Acceptable Content-Types for the response & \header{Accept: text/html } \\
             Accept-Charset & Acceptable character sets & \header{Accept-Charset: utf-8 } \\
-            Accept-Encoding & Acceptable encodings (for compression) & \header{Accept-Encoding: gzip, deflate } \\
+            \color{BigBlue}{Accept-Encoding} & Acceptable encodings (for compression) & \header{Accept-Encoding: gzip, deflate } \\
             Accept-Language & Acceptable human langages & \header{Accept-Language: en-US } \\
             Accept-Datetime & Acceptable time of last update & \header{Accept-Datetime: Fri, 21 Dec 2012 06:06:06 GMT } \\
-            Authorization & HTTP authentication credentials & \header{Authorization: Basic YnJvOmhvbmVzdGx5 } \\
+            \color{BigBlue}{Authorization} & HTTP authentication credentials & \header{Authorization: Basic YnJvOmhvbmVzdGx5 } \\
             Cache-Control & Directives which caching mechanisms must obey & \header{Cache-Control: no-cache } \\
             Connection & Type of preffered connection for the client & \header{Connection: keep-alive } \\
-            Cookie & An http cookie from the client (see: Set-Cookie) & \header{Cookie: \$Version=1; Skin=new; } \\
+            \color{BigBlue}{Cookie} & An http cookie from the client (see: Set-Cookie) & \header{Cookie: \$Version=1; Skin=new; } \\
             Content-Length & The length of the body in bytes & \header{Content-Length: 1337 } \\
             Content-MD5 & A base-64 encoded MD5 checksum for the body & \header{Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ== } \\
-            Content-Type & The MIME type of the request body & \header{Content-Type: application/x-www-form-urlencoded } \\
+            \color{BigBlue}{Content-Type} & The MIME type of the request body & \header{Content-Type: application/x-www-form-urlencoded } \\
             Date & The date and time which the message was sent & \header{Date: Sun, 23 Jun 2013 12:00:00 GMT } \\
             Expect & Indicates server behaviors the client requires & \header{Expect: 100-continue } \\
             From & The email address of the user making the request & \header{From: josh.holbrook@gmail.com } \\
@@ -104,22 +106,22 @@
           \footnotesize
           \begin{tabular}{r p{0.45\textwidth} p{0.35\textwidth}}
             Field & Description & Example \\ \hline
-            Access-Control-Allow-Origin & Specifies which websites are allowed to do CORS & \header{Access-Control-Allow-Origin: * } \\
+            \color{BigBlue}{Access-Control-Allow-Origin} & Specifies which websites are allowed to do CORS & \header{Access-Control-Allow-Origin: * } \\
             Accept-Ranges & Partial content range types supported & \header{Accept-Ranges: bytes } \\
             Age & Age of entity in proxy cache (seconds) & \header{Age: 42 } \\
             Allow & Valid HTTP methods for the resource (paired with 405 Method not allowed) & \header{Allow: GET, HEAD } \\
             Cache-Control & Specifies behavior to caching proxies from server to client (in seconds) & \header{Cache-Control: max-age=3600 } \\
             Connection & Options desired for the connection & \header{Connection: close } \\
-            Content-Encoding & The type of encoding used for the response body (used for compression) & \header{Content-Encoding: gzip } \\
+            \color{BigBlue}{Content-Encoding} & The type of encoding used for the response body (used for compression) & \header{Content-Encoding: gzip } \\
             Content-Language & The human language in the response body & \header{Content-Language: en-US } \\
             Content-Length & Length of the response body in bytes & \header{Content-Length: 123 } \\
             Content-Location & Alternate location for the resource & \header{Content-Location: /index.html } \\
             Content-MD5 & A Base64-encoded MD5 checksum for the response body & \header{Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ== } \\
             Content-Disposition & Directives used by the client to prompt the user to download a response as a file & \header{Content-Disposition: attachment;} \header{filename="climate\_data.csv" } \\
-            Content-Type & The MIME type of the response body & \header{Content-Type: text/html; charset=utf-8 } \\
+            \color{BigBlue}{Content-Type} & The MIME type of the response body & \header{Content-Type: text/html; charset=utf-8 } \\
             Etag & A unique string used to identify a specific version of a resource & \header{ETag: "737060cd8c284d8af7ad3082f209582d" } \\
             Expires & A date/time after which the resource should be considered outdated by the client & \header{Expires: Fri, 29 Nov 2013 12:34:56 GMT } \\
-            Last-Modified & The date at which the resource was last modified & \header{Last-Modified: Sat, 13 Oct 2012 09:35:00 GMT } \\
+            \color{BigBlue}{Last-Modified} & The date at which the resource was last modified & \header{Last-Modified: Sat, 13 Oct 2012 09:35:00 GMT } \\
             Link & Used to specify relationships with other resources & \header{Link: </feed>; rel="alternate" } \\
             Location & The location of the resource (used in 3XX redirects) & \header{Location: http://www.google.com } \\
             P3P & Supposed to set privacy policy as specified by P3P. Most browsers do not fully implement it, but may contain filler text in order to convince browsers to grant permissions for third party cookies. & \header{P3P: CP="This is not a P3P policy! See} \header{http://www.google.com/support/accounts/bin/} \header{answer.py?hl=en\&answer=151657 for more info."} \\
@@ -127,7 +129,7 @@
             Proxy-Authenticate & Request authentication to access a proxy & \header{Proxy-Authenticate: Basic } \\
             Retry-After & If the resource is unavailable, the client should try again after some given time (seconds) & \header{Retry-After: 60 } \\
             Server & A name for the server & \header{Server: Apache/2.4.1 (Unix) } \\
-            Set-Cookie & Set an HTTP cookie & \header{UserID=jesusabdullah; Max-Age=3600; Version=1 } \\
+            \color{BigBlue}{Set-Cookie} & Set an HTTP cookie & \header{UserID=jesusabdullah; Max-Age=3600; Version=1 } \\
             Status & HTTP status code & \header{Status: 200 OK } \\
             Strict-Transport-Security & Used to specify HTTPS-only policies & \header{Strict-Transport-Security: max-age=16070400;} \header{includeSubDomains } \\
             Trailer & Headers which will be in the trailers of a chunked transfer encoding & Trailer: \header{Max-Forwards } \\
