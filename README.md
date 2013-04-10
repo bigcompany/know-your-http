@@ -14,3 +14,7 @@ Just run `make`!
 
 I'm a terrible designer. Are you good at LaTeX? (Probably not). Could also use
 a hand with the copy!
+
+# License:
+
+[Creative Commons BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/3.0/
