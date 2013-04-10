@@ -21,4 +21,4 @@ In order for the build process to be successful, you will need the following:
 
 ## Licensing:
 
-These posters are licensed [Creative Commons BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/3.0/ . The big.vc logo itself is copyright Big Company, all rights reserved, so please do not use it in derivative works.
+These posters are licensed [Creative Commons BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/3.0/) . The big.vc logo itself is copyright Big Company, all rights reserved, so please do not use it in derivative works.
