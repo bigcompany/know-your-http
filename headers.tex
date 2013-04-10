@@ -4,17 +4,21 @@
 
 \usepackage[orientation=landscape, size=a0]{beamerposter}
 \usepackage{listings}
+\usepackage{graphicx}
+\usepackage{cclicenses}
 
 \setlength{\tabcolsep}{18pt}
 \renewcommand{\arraystretch}{1.7}
 
 \newcommand{\header}[1]{\texttt{\lstinline!#1!}}
+\newcommand{\cw}{\copyright Big Company}
+\newcommand{\license}{\cc Creative Commons BY-NC-SA}
 
 \begin{document}
   \begin{frame}{}
     \begin{minipage}{\textwidth}
       \centering
-      \VERYHuge{KNOW YOUR HTTP HEADERS!}
+      \includegraphics[]{./title-headers.png}
     \end{minipage}
 
     \vspace{0.5in}
