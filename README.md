@@ -19,6 +19,12 @@ In order for the build process to be successful, you will need the following:
 * The `beamerposter` and `cclicences` LaTeX packages and their dependencies (if you installed texlive you may already have these installed)
 * Make
 
+To generate very large .png versions, run:
+
+    $ make pngs
+
+For this command, you will need `imagemagick` installed.
+
 ## Licensing:
 
 These posters are licensed [Creative Commons BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/3.0/) . The big.vc logo itself is copyright Big Company, all rights reserved, so please do not use it in derivative works.
