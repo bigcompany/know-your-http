@@ -1,0 +1,97 @@
+\documentclass[final]{beamer}
+
+\usecolortheme{dove}
+
+\usepackage[orientation=landscape, size=a0]{beamerposter}
+
+\newcommand{\yes}{\color{green!60!black}{yes}}
+\newcommand{\no}{\color{red}{no}}
+\newcommand{\method}[1]{\textbf{#1}}
+
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{1.1}
+
+\title{\Large Know Your HTTP Methods!}
+\begin{document}
+  \begin{frame}{}
+    \begin{minipage}{\textwidth}
+      \centering
+      \VERYHuge{KNOW YOUR HTTP METHODS!}
+    \end{minipage}
+    
+    \vspace{0.5in}
+
+    \begin{columns}
+      \begin{column}{0.1\textwidth}
+      \end{column}
+      \begin{column}{0.8\textwidth}
+        \begin{block}{}
+          \huge
+            HTTP methods, also called verbs, are used to specify which \emph{action}
+            to apply to the  \emph{resource} specified by the Uniform Resource
+            Identifier (URI). What exactly this resource represents, or the exact
+            action performed on the resource, depends on the application server.
+          \normalsize
+        \end{block}
+      \end{column}
+      \begin{column}{0.1\textwidth}
+      \end{column}
+    \end{columns}
+
+    \vspace{0.5in}
+
+    \begin{columns}
+      \begin{column}{0.05\textwidth}
+      \end{column}
+      \begin{column}{0.9\textwidth}
+        \begin{block}{}
+          \Huge
+          \begin{tabular}{r p{0.62\textwidth} l l l}
+            Method & Description & Safe? & Idempotent? & Specification \\ \hline
+            \method{GET} & Request a representation of the resource & \yes & \yes & HTTP 1.0 \\
+            \method{HEAD} & Request only the headers for the resource & \yes & \yes &HTTP 1.0 \\
+            \method{POST} & Process the request body with the resource & \no & \no & HTTP 1.0 \\
+            \method{PUT} & Create or update a new resource with the contents of the request body & \no & \yes & HTTP 1.1 \\
+            \method{DELETE} & Remove the specified resource & \no & \yes & HTTP 1.1 \\
+            \method{OPTIONS} & Return the HTTP methods the specified resource supports & \yes & \yes & HTTP 1.1 \\
+            \method{TRACE} & Echo the received request & \yes & \yes & HTTP 1.1 \\
+            \method{CONNECT} & Convert the connection to a transparent tcp/ip tunnel, usually to allow SSL/TLS through an unencrypted HTTP proxy & --- & --- & HTTP 1.1 \\
+            \method{PATCH} & Apply partial modifications to the resource & \no & \yes & RFC-5789 \\
+          \end{tabular}
+        \end{block}
+
+        \vspace{0.5in}
+
+        \begin{columns}
+          \begin{column}{0.34\textwidth}
+            \begin{block}{\huge{Safe Methods}}
+              \Large
+              Certain methods are specified to be \emph{safe}, which means that executing
+              them will not modify the resource or have other side effects on the
+              overall state of the server. Unsafe methods may cause side effects, such
+              as modifying a resource, sending an email or initiating the processing of
+              a credit card.
+            \end{block}
+          \end{column}
+          \begin{column}{0.64\textwidth}
+            \begin{block}{\huge{Idempotent Methods}}
+              \Large
+              Some methods are \emph{idempotent}, meaning that executing identical
+              requests multiple times will have the same effect as executing only one
+              request. For example, DELETE requests are indempotent because once a
+              resource is deleted it can't be deleted again. Conversely, POST requests
+              are not idempotent because a second POST request may send a second email
+              or process the same credit card a second time.
+
+              By definition, \emph{safe} methods are also \emph{idempotent}.
+            \end{block}
+          \end{column}
+        \end{columns}
+
+      \end{column}
+      \begin{column}{0.05\textwidth}
+      \end{column}
+    \end{columns}
+
+  \end{frame}
+\end{document}
