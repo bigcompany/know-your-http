@@ -23,7 +23,7 @@ To generate very large .png versions, run:
 
     $ make pngs
 
-For this command, you will need `imagemagick` installed.
+For this command, you will need `imagemagick` installed. **Only do this if you have no choice as the file sizes are very very large.**
 
 ## Licensing:
 
