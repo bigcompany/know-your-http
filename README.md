@@ -27,4 +27,4 @@ For this command, you will need `imagemagick` installed. **Only do this if you h
 
 ## Licensing:
 
-These posters are licensed [Creative Commons BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/3.0/) . The big.vc logo itself is copyright Big Company, all rights reserved, so please do not use it in derivative works.
+These posters are licensed [Creative Commons BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/3.0/) . The big.vc logo itself is copyright The Big Internet Company, all rights reserved, so please do not use it in derivative works.
