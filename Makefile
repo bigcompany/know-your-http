@@ -28,10 +28,10 @@ status-codes.pdf:
 	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error status-codes.tex
 
 headers.png: headers.pdf
-	convert headers.pdf -resize 10104x headers.png
+	convert headers.pdf -resize 20208x headers.png
 
 methods.png: methods.pdf
-	convert methods.pdf -resize 10104x methods.png
+	convert methods.pdf -resize 20208x methods.png
 
 status-codes.png: status-codes.pdf
-	convert status-codes.pdf -resize 10104x status-codes.png
+	convert status-codes.pdf -resize 20208x status-codes.png
