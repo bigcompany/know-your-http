@@ -5,15 +5,15 @@ pdfs: headers.pdf methods.pdf status-codes.pdf
 pngs: headers.png methods.png status-codes.png
 
 clean:
-	rm *.aux
-	rm *.log
-	rm *.nav
-	rm *.out
-	rm headers.pdf
-	rm methods.pdf
-	rm status-codes.pdf
-	rm *.snm
-	rm *.toc
+	rm -f *.aux
+	rm -f *.log
+	rm -f *.nav
+	rm -f *.out
+	rm -f headers.pdf
+	rm -f methods.pdf
+	rm -f status-codes.pdf
+	rm -f *.snm
+	rm -f *.toc
 
 headers.pdf:
 	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error headers.tex
