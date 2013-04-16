@@ -1,9 +1,11 @@
-\documentclass[final]{beamer}
+\documentclass[final,table]{beamer}
 
 \usecolortheme{dove}
 
 \usepackage[orientation=portrait,size=a0]{beamerposter}
 \usepackage{graphicx}
+
+\definecolor{light-gray}{gray}{0.95}
 
 \setlength{\tabcolsep}{18pt}
 \renewcommand{\arraystretch}{1.1}
@@ -45,6 +47,7 @@
 
       \vspace{0.3in}
 
+      \rowcolors{3}{light-gray}{white}
       \begin{tabular}{p{0.3\textwidth} p{0.65\textwidth}}
         Status Code & Description \\ \hline
         100 Continue & The server has received the request headers, and the client should begin to send the request body \\
@@ -56,6 +59,7 @@
 
       \vspace{0.3in}
 
+      \rowcolors{3}{light-gray}{white}
       \begin{tabular}{p{0.3\textwidth} p{0.65\textwidth}}
         Status Code & Description \\ \hline
         200 OK & Standard response for successful HTTP requests \\
@@ -72,6 +76,7 @@
 
       \vspace{0.3in}
 
+      \rowcolors{3}{light-gray}{white}
       \begin{tabular}{p{0.3\textwidth} p{0.65\textwidth}}
         Status Code & Description \\ \hline
         300 Multiple Choices & Indicates that there are multiple locations which the client may follow \\
@@ -87,6 +92,7 @@
 
       \vspace{0.3in}
 
+      \rowcolors{3}{light-gray}{white}
       \begin{tabular}{p{0.3\textwidth} p{0.65\textwidth}}
         Status Code & Description \\ \hline
         400 Bad Request & The request can not be fulfilled because the request contained bad syntax \\
@@ -124,6 +130,7 @@
 
       \vspace{0.3in}
 
+      \rowcolors{3}{light-gray}{white}
       \begin{tabular}{p{0.3\textwidth} p{0.65\textwidth}}
         Status Code & Description \\ \hline
         500 Internal Server Error & A generic server error message, for when no other more specific message is suitable \\
