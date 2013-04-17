@@ -1,4 +1,4 @@
-\documentclass[final]{beamer}
+\documentclass[final,table]{beamer}
 
 \usecolortheme{dove}
 
@@ -8,6 +8,7 @@
 \newcommand{\yes}{\color{green!60!black}{yes}}
 \newcommand{\no}{\color{red}{no}}
 \newcommand{\method}[1]{\textbf{#1}}
+\definecolor{light-gray}{gray}{0.95}
 
 \setlength{\tabcolsep}{18pt}
 \renewcommand{\arraystretch}{1.1}
@@ -48,6 +49,7 @@
       \begin{column}{0.9\textwidth}
         \begin{block}{}
           \Huge
+          \rowcolors{3}{light-gray}{white}
           \begin{tabular}{r p{0.62\textwidth} l l l}
             Method & Description & Safe? & Idempotent? & Specification \\ \hline
             \method{GET} & Request a representation of the resource & \yes & \yes & HTTP 1.0 \\

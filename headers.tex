@@ -1,4 +1,4 @@
-\documentclass[final]{beamer}
+\documentclass[final,table]{beamer}
 
 \usecolortheme{dove}
 
@@ -12,6 +12,7 @@
 
 \newcommand{\header}[1]{\texttt{\lstinline!#1!}}
 \definecolor{BigBlue}{HTML}{347ABE}
+\definecolor{light-gray}{gray}{0.95}
 
 \input{./footer.tex}
 
@@ -52,6 +53,7 @@
           \vspace{0.3in}
 
           \footnotesize
+          \rowcolors{3}{light-gray}{white}
           \begin{tabular}{r p{0.45\textwidth} p{0.35\textwidth}}
             Field & Description & Example \\ \hline
             \color{BigBlue}{Accept} & Acceptable Content-Types for the response & \header{Accept: text/html } \\
@@ -104,6 +106,7 @@
           \vspace{0.3in}
 
           \footnotesize
+          \rowcolors{3}{light-gray}{white}
           \begin{tabular}{r p{0.45\textwidth} p{0.35\textwidth}}
             Field & Description & Example \\ \hline
             \color{BigBlue}{Access-Control-Allow-Origin} & Specifies which websites are allowed to do CORS & \header{Access-Control-Allow-Origin: * } \\
