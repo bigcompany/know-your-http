@@ -59,7 +59,7 @@
             \method{DELETE} & Remove the specified resource & \no & \yes & HTTP 1.1 \\
             \method{OPTIONS} & Return the HTTP methods the specified resource supports & \yes & \yes & HTTP 1.1 \\
             \method{TRACE} & Echo the received request & \yes & \yes & HTTP 1.1 \\
-            \method{CONNECT} & Convert the connection to a transparent tcp/ip tunnel, usually to allow SSL/TLS through an unencrypted HTTP proxy & --- & --- & HTTP 1.1 \\
+            \method{CONNECT} & Convert the connection to a transparent TCP/IP tunnel, usually to allow SSL/TLS through an unencrypted HTTP proxy & --- & --- & HTTP 1.1 \\
             \method{PATCH} & Apply partial modifications to the resource & \no & \yes & RFC-5789 \\
           \end{tabular}
         \end{block}
@@ -82,7 +82,7 @@
               \Large
               Some methods are \emph{idempotent}, meaning that executing identical
               requests multiple times will have the same effect as executing only one
-              request. For example, DELETE requests are indempotent because once a
+              request. For example, DELETE requests are idempotent because once a
               resource is deleted it can't be deleted again. Conversely, POST requests
               are not idempotent because a second POST request may send a second email
               or process the same credit card a second time.
