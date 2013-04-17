@@ -80,7 +80,7 @@
       \begin{tabular}{p{0.3\textwidth} p{0.65\textwidth}}
         Status Code & Description \\ \hline
         300 Multiple Choices & Indicates that there are multiple locations which the client may follow \\
-        301 Moved Permanently & The resource has moved permantly, and all future requests should use the give URL instead \\
+        301 Moved Permanently & The resource has moved permanently, and all future requests should use the give URL instead \\
         302 Found & The resource has been found (or moved temporarily). The HTTP/1.0 specification requires that the redirect uses the same verb, but in practice clients use a GET as in a 303. See 303 and 307 \\
         303 See Other & The resource has been found, and should be accessed using a GET method. Added in HTTP/1.1 to clarify the ambiguity in the behavior of status 302. See 302 and 307 \\
         304 Not Modified & The resource has not been modified since the last time the client has cached it \\
@@ -136,12 +136,12 @@
         500 Internal Server Error & A generic server error message, for when no other more specific message is suitable \\
         501 Not Implemented & The server can not process the request method \\
         502 Bad Gateway & The server is a gateway or proxy, and received a bad response from the upstream server (such as a socket hangup) \\
-        503 Service Unavailable & The resource is temporarily unavailable, usually because it is overloaded or down for maintenence \\
+        503 Service Unavailable & The resource is temporarily unavailable, usually because it is overloaded or down for maintenance \\
         504 Gateway Timeout & The server is a gateway or proxy, and the upstream server did not respond in a reasonable timeframe \\
         505 HTTP Version Not Supported & The server does not support the request's specified HTTP version \\
         507 Insufficient Storage (WebDAV) & The server is out of storage space and can not complete the request \\
         508 Loop Detected (WebDAV) & The server has detected an infinite loop while processing the request \\
-        509 Bandwidth Limit Exceeded & A convention used to report that bandwidth limits have been exceeded, and not part of any RFC or spec \\
+        509 Bandwidth Limit Exceeded & A convention used to report that bandwidth limits have been exceeded, and not part of any RFC or spec. \\
       \end{tabular}
     \end{block}
   \end{frame}
