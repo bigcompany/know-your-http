@@ -24,8 +24,8 @@ clean:
 
 %.pdf: %.tex
 	@echo "# Generating $@ from $<..."
-	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error $< > /dev/null
-	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error $< > /dev/null
+	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error $<
+	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error $<
 
 thumbnails:
 	@mkdir -p thumbnails
