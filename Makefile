@@ -32,7 +32,7 @@ thumbnails:
 
 thumbnails/%.png: %.pdf thumbnails
 	@echo "# Generating $@ from $<..."
-	convert $< -resize 200x $@
+	convert $< -resize x200 $@
 
 %.png: %.pdf
 	@echo "# Generating $@ from $<..."
