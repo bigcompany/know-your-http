@@ -31,15 +31,10 @@ In order for the build process to be successful, you will need the following:
 
 * LaTeX
 * The `beamerposter` and `cclicences` LaTeX packages and their dependencies (if you installed texlive you may already have these installed)
+* `imagemagick` to build the thumbnail images
 * Make
 
 You can install [TeXLive](https://www.tug.org/texlive/) in Ubuntu by running `sudo apt-get install texlive`. Mac users may try [MacTeX](http://www.tug.org/mactex/), and the preferred distribution for Windows is [MikTeX](http://www.miktex.org/). If you don't have make, you should be able to compile it manually with the `pdflatex` command or similar means.
-
-To generate very large .png versions, run:
-
-    $ make pngs
-
-For this command, you will need `imagemagick` installed. **Only do this if you have no choice as the file sizes are very very large.**
 
 ## Licensing:
 
