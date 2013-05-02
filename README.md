@@ -1,6 +1,10 @@
 # KNOW YOUR HTTP!
 ## Some posters for your workplace
 
+![](https://raw.github.com/bigcompany/know-your-http/master/thumbnails/methods.png)
+![](https://raw.github.com/bigcompany/know-your-http/master/thumbnails/status-codes.png)
+![](https://raw.github.com/bigcompany/know-your-http/master/thumbnails/headers.png)
+
 ## Downloads
 
 You can take these to any print shop (such as Kinko's) and they will be well-equipped to print them for you:
