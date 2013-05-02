@@ -1,51 +1,39 @@
+PDFS = headers.pdf methods.pdf status-codes.pdf
+PNGS = headers.png methods.png status-codes.png
+THUMBS = thumbnails/headers.png thumbnails/methods.png thumbnails/status-codes.png
+
 all: pdfs thumbs
 
-pdfs: headers.pdf methods.pdf status-codes.pdf
+pdfs: $(PDFS)
 
-pngs: headers.png methods.png status-codes.png
+pngs: $(PNGS)
 
-thumbs: thumbnails/headers.png thumbnails/methods.png thumbnails/status-codes.png
+thumbs: $(THUMBS)
 
 clean:
+	@echo "# Cleaning up..."
 	rm -f *.aux
 	rm -f *.log
 	rm -f *.nav
 	rm -f *.out
-	rm -f headers.pdf
-	rm -f methods.pdf
-	rm -f status-codes.pdf
+	rm -f $(PDFS)
+	rm -f $(PNGS)
+	rm -rf thumbnails
 	rm -f *.snm
 	rm -f *.toc
 
-headers.pdf:
-	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error headers.tex
-	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error headers.tex
-
-methods.pdf:
-	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error methods.tex
-	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error methods.tex
-
-status-codes.pdf:
-	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error status-codes.tex
-	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error status-codes.tex
+%.pdf: %.tex
+	@echo "# Generating $@ from $<..."
+	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error $< > /dev/null
+	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error $< > /dev/null
 
 thumbnails:
-	mkdir -p thumbnails
+	@mkdir -p thumbnails
 
-thumbnails/headers.png: headers.pdf thumbnails
-	convert headers.pdf -resize 200x thumbnails/headers.png
+thumbnails/%.png: %.pdf thumbnails
+	@echo "# Generating $@ from $<..."
+	convert $< -resize 200x $@
 
-thumbnails/methods.png: methods.pdf thumbnails
-	convert methods.pdf -resize 200x thumbnails/methods.png
-
-thumbnails/status-codes.png: status-codes.pdf thumbnails
-	convert status-codes.pdf -resize 200x thumbnails/status-codes.png
-
-headers.png: headers.pdf
-	convert headers.pdf -resize 20208x headers.png
-
-methods.png: methods.pdf
-	convert methods.pdf -resize 20208x methods.png
-
-status-codes.png: status-codes.pdf
-	convert status-codes.pdf -resize 20208x status-codes.png
+%.png: %.pdf
+	@echo "# Generating $@ from $<..."
+	convert $< -resize 20208x $@
