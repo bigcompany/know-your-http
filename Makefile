@@ -1,8 +1,10 @@
-all: pdfs
+all: pdfs thumbs
 
 pdfs: headers.pdf methods.pdf status-codes.pdf
 
 pngs: headers.png methods.png status-codes.png
+
+thumbs: thumbnails/headers.png thumbnails/methods.png thumbnails/status-codes.png
 
 clean:
 	rm -f *.aux
@@ -26,6 +28,18 @@ methods.pdf:
 status-codes.pdf:
 	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error status-codes.tex
 	pdflatex -shell-escape -interaction=nonstopmode -halt-on-error status-codes.tex
+
+thumbnails:
+	mkdir -p thumbnails
+
+thumbnails/headers.png: headers.pdf thumbnails
+	convert headers.pdf -resize 200x thumbnails/headers.png
+
+thumbnails/methods.png: methods.pdf thumbnails
+	convert methods.pdf -resize 200x thumbnails/methods.png
+
+thumbnails/status-codes.png: status-codes.pdf thumbnails
+	convert status-codes.pdf -resize 200x thumbnails/status-codes.png
 
 headers.png: headers.pdf
 	convert headers.pdf -resize 20208x headers.png
