@@ -1,12 +1,9 @@
 PDFS = headers.pdf methods.pdf status-codes.pdf
-PNGS = headers.png methods.png status-codes.png
 THUMBS = thumbnails/headers.png thumbnails/methods.png thumbnails/status-codes.png
 
 all: pdfs thumbs
 
 pdfs: $(PDFS)
-
-pngs: $(PNGS)
 
 thumbs: $(THUMBS)
 
@@ -33,7 +30,3 @@ thumbnails:
 thumbnails/%.png: %.pdf thumbnails
 	@echo "# Generating $@ from $<..."
 	convert $< -resize x200 $@
-
-%.png: %.pdf
-	@echo "# Generating $@ from $<..."
-	convert $< -resize 20208x $@
