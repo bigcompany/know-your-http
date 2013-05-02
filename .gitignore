@@ -1,3 +1,9 @@
 ./headers.png
 ./methods.png
 ./status-codes.png
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
