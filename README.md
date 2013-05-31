@@ -7,7 +7,7 @@ You can take these to any print shop (such as Kinko's) and they will be well-equ
 
 ### [KNOW YOUR HTTP HEADERS!](https://github.com/jesusabdullah/know-your-http/blob/master/headers.pdf?raw=true)
 
-[![](https://raw.github.com/bigcompany/know-your-http/master/thumbnails/methods.png)](https://github.com/jesusabdullah/know-your-http/blob/master/headers.pdf?raw=true)
+[![](https://raw.github.com/bigcompany/know-your-http/master/thumbnails/headers.png)](https://github.com/jesusabdullah/know-your-http/blob/master/headers.pdf?raw=true)
 
 
 ### [KNOW YOUR HTTP METHODS!](https://github.com/jesusabdullah/know-your-http/blob/master/methods.pdf?raw=true)
